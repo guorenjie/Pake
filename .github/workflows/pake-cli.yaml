@@ -63,9 +63,6 @@ jobs:
   build:
     name: ${{ inputs.platform }}
     runs-on: ${{ inputs.platform }}
-    defaults:
-      run:
-        working-directory: /Users/runner/work/Pake/Pake/
     strategy:
       fail-fast: false
 
@@ -149,7 +146,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: output-${{ inputs.platform }}.zip
-        path: node_modules/pake-cli/output/
+        path: /Users/runner/work/Pake/Pake/node_modules/pake-cli/output/
         retention-days: 3
     
     - name: rust cache store
