@@ -63,6 +63,9 @@ jobs:
   build:
     name: ${{ inputs.platform }}
     runs-on: ${{ inputs.platform }}
+    defaults:
+      run:
+        working-directory: /Users/runner/work/Pake/Pake/
     strategy:
       fail-fast: false
 
